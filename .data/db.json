@@ -1,0 +1,138 @@
+{
+  "users": [
+    {
+      "_id": "user_admin_01",
+      "name": "Admin Editor",
+      "email": "admin@writespace.com",
+      "password": "$2b$10$Z5SsEZPWrprxRLuboO2sauCeogekyLwNKmc2M18tpobLWD4s3tLQ.",
+      "role": "admin",
+      "createdAt": "2026-08-15T10:00:00.000Z"
+    },
+    {
+      "_id": "user_alex_02",
+      "name": "Alex Chen",
+      "email": "alex@student.edu",
+      "password": "$2b$10$yveX4Iu42XnsuFftBmq7MOOf6tIeOYT2m/AXTRFrrUWwIWT1oDbsm",
+      "role": "user",
+      "createdAt": "2026-08-20T14:30:00.000Z"
+    },
+    {
+      "_id": "user_priya_03",
+      "name": "Priya Sharma",
+      "email": "priya@student.edu",
+      "password": "$2b$10$ZF0m6.MhmyiuFD1yN.hms.6xgrzzmK3aTqh0KyT7WLXXGhNjGfCDm",
+      "role": "user",
+      "createdAt": "2026-08-25T09:15:00.000Z"
+    }
+  ],
+  "posts": [
+    {
+      "_id": "post_01",
+      "title": "Getting Started with Java: From Syntax to OOP",
+      "description": "A beginner-friendly guide to understanding variables, classes, inheritance, and core JVM concepts for your college computer science course.",
+      "content": "When I first stepped into my Object-Oriented Programming class, Java felt rigid and full of boilerplate. Coming from Python, seeing 'public static void main(String[] args)' felt unnecessarily wordy.\n\nHowever, once you understand why Java is designed this way, the structure starts to become your ally, especially on larger team projects.\n\n### 1. The JVM and Portability\nThe phrase \"Write Once, Run Anywhere\" isn't just marketing. The Java Virtual Machine translates compiled bytecode (.class) into native instructions for whichever operating system your machine runs. This abstraction prevents countless platform-specific compilation headaches.\n\n### 2. Classes and Objects\nIn Java, virtually everything revolves around objects. An object is an instance of a class that holds state (fields) and behavior (methods).\n\n```java\npublic class Student {\n    private String name;\n    private int semester;\n\n    public Student(String name, int semester) {\n        this.name = name;\n        this.semester = semester;\n    }\n\n    public void displayInfo() {\n        System.out.println(name + \" is in semester \" + semester);\n    }\n}\n```\n\n### 3. The 4 Pillars of OOP\n1. **Encapsulation**: Keeping fields private and providing getters/setters protects your internal state.\n2. **Inheritance**: Creating child classes with the `extends` keyword avoids repeating common logic.\n3. **Polymorphism**: Overriding methods lets you treat derived types under a unified parent interface.\n4. **Abstraction**: Using interfaces and abstract classes lets you define contracts without dictating implementation details.\n\nIf you are just beginning with Java, write code by hand every single day. Don't rely solely on IDE autocompletion until you truly understand the syntax.",
+      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1000&q=80",
+      "category": "Programming",
+      "author": "user_alex_02",
+      "createdAt": "2026-09-02T11:20:00.000Z",
+      "updatedAt": "2026-09-02T11:20:00.000Z"
+    },
+    {
+      "_id": "post_02",
+      "title": "What I Learned from Building My First React Project",
+      "description": "Reflecting on component lifecycles, state management hurdles, and why thinking in components transformed how I approach web development.",
+      "content": "During my second year of college, my web development journey had been strictly vanilla HTML, CSS, and DOM manipulation scripts. Whenever an event fired, I wrote manual querySelectors and innerHTML updates.\n\nThen I built my first React project—a student task tracker—and my perspective shifted completely.\n\n### The Big Shift: Thinking in State\nIn vanilla JavaScript, you are constantly mutating the DOM step-by-step. In React, you describe what the UI should look like based on current state, and React figures out the DOM updates efficiently.\n\nInstead of:\n```js\n// Vanilla DOM manipulation\nbutton.addEventListener('click', () => {\n  counter++;\n  display.innerText = counter;\n});\n```\n\nYou declare state:\n```jsx\nconst [counter, setCounter] = useState(0);\nreturn <button onClick={() => setCounter(c => c + 1)}>{counter}</button>;\n```\n\n### Mistakes I Made\n1. **Prop drilling too deep**: Passing props through 5 levels before learning about context or lifting state properly.\n2. **Infinite loops with useEffect**: Not understanding dependency arrays caused my API to get pinged hundreds of times in minutes.\n3. **Overcomplicating component structure**: Breaking single buttons into 4 different subcomponents before it was necessary.\n\nMy biggest takeaway is to keep components simple and single-purpose. Start small, verify data flow, and avoid premature optimization.",
+      "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=1000&q=80",
+      "category": "Technology",
+      "author": "user_priya_03",
+      "createdAt": "2026-09-08T15:45:00.000Z",
+      "updatedAt": "2026-09-08T15:45:00.000Z"
+    },
+    {
+      "_id": "post_03",
+      "title": "Simple Ways to Improve Your Daily Coding Practice",
+      "description": "Consistent daily habits, reading open-source codebases, and writing clean comments can dramatically boost your programming retention.",
+      "content": "A lot of college students ask how to move from copying tutorial snippets to actually solving problems independently. The secret isn't genius; it is deliberate daily practice.\n\n### 1. Code in Small, Daily Increments\nThirty minutes of focused coding every single evening beats a frantic 8-hour binge the night before an assignment deadline. Your brain needs rest cycles to consolidate memory and spot conceptual patterns.\n\n### 2. Read Other People's Code\nDon't just write your own code. Go to GitHub, search for libraries or small projects built with the tech stack you are learning, and read their pull requests. See how seasoned engineers name variables, structure folders, and handle edge cases.\n\n### 3. Explain the Code Out Loud (Rubber Ducking)\nWhenever you encounter a tricky bug, explain the code line-by-line to a rubber duck, an inanimate object, or a classmate. Often, hearing yourself explain your logic highlights the exact assumption that was false.\n\n### 4. Write Meaningful Commit Messages\nStop writing \"update\", \"fix bug\", or \"changes\". Write concise commit messages like:\n- \"feat: add category filter to blog list\"\n- \"fix: prevent empty comment submission\"\n\nThese habits build professional discipline that will show immediately in your technical interviews.",
+      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=80",
+      "category": "Education",
+      "author": "user_alex_02",
+      "createdAt": "2026-09-12T09:10:00.000Z",
+      "updatedAt": "2026-09-12T09:10:00.000Z"
+    },
+    {
+      "_id": "post_04",
+      "title": "Understanding REST APIs: Endpoints, Methods, and Status Codes",
+      "description": "A practical breakdown of how client-server communication works under the hood with JSON payloads and HTTP verbs.",
+      "content": "Almost every web and mobile app today relies on REST (Representational State Transfer) APIs to exchange data between a frontend client and a database server.\n\nHere is a quick mental model that helped me pass my backend engineering exam and build reliable full-stack apps.\n\n### HTTP Methods (The Verbs)\n- **GET**: Retrieve data. Safe and idempotent (calling it multiple times doesn't alter server state).\n- **POST**: Create a brand new resource. Submits a payload in the request body.\n- **PUT / PATCH**: Update an existing resource. PUT replaces the resource; PATCH modifies specific fields.\n- **DELETE**: Remove a resource by ID.\n\n### Crucial Status Codes to Know\n- **200 OK**: Request succeeded and returned data.\n- **201 Created**: Resource was successfully created (standard for POST).\n- **400 Bad Request**: Client sent invalid or missing fields.\n- **401 Unauthorized**: User is not authenticated (missing or expired JWT).\n- **403 Forbidden**: User is authenticated but lacks permission (e.g. regular user trying to delete someone else's post).\n- **404 Not Found**: Resource does not exist.\n- **500 Internal Server Error**: Unhandled exception in backend logic.\n\nAlways design clean URLs using plural nouns, like `/api/posts` and `/api/posts/:id/comments`.",
+      "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80",
+      "category": "Programming",
+      "author": "user_admin_01",
+      "createdAt": "2026-09-16T16:00:00.000Z",
+      "updatedAt": "2026-09-16T16:00:00.000Z"
+    },
+    {
+      "_id": "post_05",
+      "title": "Exploring the Ridge Trails: A Weekend Reset from Screens",
+      "description": "Taking a 48-hour digital detox to hike the ridge trails, reconnect with nature, and clear my head before midterms week.",
+      "content": "As computer science students, we spend 10 to 14 hours every single day staring at glowing monitors, debugging syntax errors, and scrolling feeds.\n\nLast weekend, two classmates and I packed lightweight daypacks, left our laptops in the dorm, and drove out to the nearby mountain ridge trail.\n\n### The Value of Intentional Unplugging\nWalking uphill through cedar trees without notifications buzzing in your pocket does wonders for your mental stamina. We talked about life outside of software, watched the sunset over the valley, and made camp dinner over a portable stove.\n\nWhen I sat back down at my desk on Monday morning, problems that felt overwhelming the previous Friday suddenly looked straightforward. If you are feeling burnt out, give yourself permission to step away from your keyboard.",
+      "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80",
+      "category": "Travel",
+      "author": "user_priya_03",
+      "createdAt": "2026-09-19T13:10:00.000Z",
+      "updatedAt": "2026-09-19T13:10:00.000Z"
+    },
+    {
+      "_id": "post_06",
+      "title": "Balancing College Coursework and Side Projects Without Burning Out",
+      "description": "Practical time-blocking techniques and realistic goal-setting strategies that helped me ship side projects while keeping my GPA solid.",
+      "content": "Every internship job posting lists requirements like \"Demonstrated side projects\" alongside strong academic records. Trying to do both can easily lead to fatigue.\n\nHere is the simple framework that saved my semester:\n\n1. **Protect your core study blocks**: Never sacrifice sleep or basic coursework for late-night coding sprints.\n2. **Work on one project at a time**: Having 6 half-finished repositories is worse than having 1 complete, polished app with a clear README.\n3. **Use the 5-hour rule**: Dedicate a scheduled 5 hours per week (e.g. Saturday mornings) exclusively to your portfolio build.\n4. **Scope down ruthlessly**: Define your MVP (Minimum Viable Product) and ship it before thinking about edge-case micro-features.\n\nConsistency over intensity is what actually turns ideas into finished products.",
+      "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80",
+      "category": "Lifestyle",
+      "author": "user_alex_02",
+      "createdAt": "2026-09-22T08:30:00.000Z",
+      "updatedAt": "2026-09-22T08:30:00.000Z"
+    }
+  ],
+  "comments": [
+    {
+      "_id": "comment_01",
+      "post": "post_01",
+      "user": "user_priya_03",
+      "content": "Great explanation of OOP principles! The distinction between abstraction and encapsulation finally clicked for me.",
+      "createdAt": "2026-09-03T14:10:00.000Z",
+      "updatedAt": "2026-09-03T14:10:00.000Z"
+    },
+    {
+      "_id": "comment_02",
+      "post": "post_01",
+      "user": "user_admin_01",
+      "content": "Well written article Alex. Good emphasis on practicing daily syntax before jumping to advanced frameworks.",
+      "createdAt": "2026-09-04T09:20:00.000Z",
+      "updatedAt": "2026-09-04T09:20:00.000Z"
+    },
+    {
+      "_id": "comment_03",
+      "post": "post_02",
+      "user": "user_alex_02",
+      "content": "I had the exact same issue with useEffect infinite loops when I started! Thanks for sharing this.",
+      "createdAt": "2026-09-09T18:05:00.000Z",
+      "updatedAt": "2026-09-09T18:05:00.000Z"
+    },
+    {
+      "_id": "comment_04",
+      "post": "post_04",
+      "user": "user_alex_02",
+      "content": "The status code breakdown is super handy for college project vivas. Bookmarking this!",
+      "createdAt": "2026-09-17T11:40:00.000Z",
+      "updatedAt": "2026-09-17T11:40:00.000Z"
+    },
+    {
+      "_id": "comment_1790267494981_0xxtc",
+      "post": "post_01",
+      "user": "user_alex_02",
+      "content": "Testing comment from integration verification",
+      "createdAt": "2026-09-24T16:31:34.981Z",
+      "updatedAt": "2026-09-24T16:31:34.981Z"
+    }
+  ]
+}

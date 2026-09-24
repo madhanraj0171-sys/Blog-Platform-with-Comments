@@ -1,0 +1,6 @@
+{
+  "name": "WriteSpace - Blog Platform with Comments",
+  "description": "A clean, practical full-stack blogging platform where users can create, read, edit, discuss, and filter blogs with comments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
